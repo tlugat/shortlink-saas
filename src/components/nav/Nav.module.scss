@@ -1,3 +1,5 @@
+@import '../../scss/global';
+
 .navBar {
   width: 100%;
   height: 100vh;
@@ -10,6 +12,15 @@
   align-items: center;
   transition: .2s;
   z-index: 10;
+
+  @include small{
+    // background: none;
+    height: 100%;
+    padding: 1rem;
+    transform: translateX(0);
+    width: 50%;
+    position:unset;
+  }
 }
 
 .active {
@@ -26,5 +37,10 @@
   &__itemActive {
     text-decoration: none;
     color: red;
+  }
+  @include small{
+    flex-direction: row;
+    width: 100%;
+    height:100%;
   }
 }
