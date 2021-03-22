@@ -1,13 +1,12 @@
 import styles from '../nav/Nav.module.scss'
 
 import cx from 'classnames';
+
 import {NavLink} from 'react-router-dom'
 
 const Nav = ({menuIsActive}) => {
-
-  const classes = cx(styles.navBar, menuIsActive && styles.active);
-
-  const navBarStyle = menuIsActive ? "navBar navBar--active" : "navBar";
+  
+  const classes = cx(styles.navBar, menuIsActive  && styles.active);
   
   return (
     <nav className={classes}>

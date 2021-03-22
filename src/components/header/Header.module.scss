@@ -1,10 +1,16 @@
+@import '../../scss//global';
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  height: 10vh;
   width: 100vw;
   z-index: 15;
   position: fixed;
   top: 0;
+  @include small {
+    z-index:unset;
+  }
 }

@@ -1,12 +1,14 @@
 import styles from './Header.module.scss';
 
+import Nav from "../nav/Nav";
 import NavLogo from '../nav/NavLogo/NavLogo';
 
-const Header = ({menuIsActive, toggleMenu}) => {
+const Header = ({menuIsActive, toggleMenu, screenWidth}) => {
   return (
     <div className={styles.header}>
       <h1>ShortLink</h1>
-      <NavLogo menuIsActive={menuIsActive} toggleMenu={toggleMenu}/>
+      {screenWidth >= 580 && <Nav/>}
+      {screenWidth < 580 && <NavLogo menuIsActive={menuIsActive} toggleMenu={toggleMenu}/>}
     </div>
   )
 }
