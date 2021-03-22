@@ -1,0 +1,30 @@
+.navBar {
+  width: 100%;
+  height: 100vh;
+  background: lightgreen;
+  position: absolute;
+  top:0;
+  transform: translateX(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+  z-index: 10;
+}
+
+.active {
+  transform: translateX(0);
+  transition: .2s;
+}
+.navList {
+  height: 40%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  &__itemActive {
+    text-decoration: none;
+    color: red;
+  }
+}

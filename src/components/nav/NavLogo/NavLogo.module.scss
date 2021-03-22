@@ -1,0 +1,45 @@
+.burger  {  
+  cursor: pointer;
+  padding: 12px 0;
+  
+  span {
+    position: relative;
+    display: block;
+    width: 1.5rem;
+    height: 4px;
+    background: #000;
+    transition: all .2s ease-in-out;
+    
+    &:before, &:after {
+      position: absolute;
+      background: #000;
+      content: '';
+      width: 20px;
+      height: 4px;
+      transition: all .2s ease-in-out;
+    }
+    
+    &:before {
+      top: -8px;
+    }
+    
+    &:after {
+      top: 8px;
+    }
+  }
+  &.active {
+    span {
+      background: transparent;  
+      
+      &:before {
+        transform: rotate(45deg) translate(5px, 6px);
+      }
+      
+      &:after {
+        transform: rotate(-45deg) translate(5px, -6px);
+      }
+    }
+  } 
+}
+
+
