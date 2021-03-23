@@ -1,46 +1,77 @@
 @import '../../scss/global';
 
-.navBar {
+.nav {
   width: 100%;
   height: 100vh;
-  background: lightgreen;
+  background: #fff;
   position: absolute;
   top:0;
   transform: translateX(100%);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   transition: .2s;
   z-index: 10;
 
   @include small{
-    // background: none;
+    background: none;
     height: 100%;
     padding: 1rem;
     transform: translateX(0);
-    width: 50%;
+    width: 75%;
     position:unset;
+    flex-direction: row;
+    justify-items: flex-end;
   }
+
+  &__profile {
+    height: 5rem;
+    width: 5rem;
+    background: no-repeat url('../../assets//img/placeholder-profile.jpg');
+    background-size: cover;
+    border-radius: 50px;
+    
+    @include small {
+      width: 2.5rem;
+      height: 2.5rem;
+      order: 1;
+      margin-left: auto;
+    }
+  }
+
+  &__list {
+    height: 40%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    @include small{
+      flex-direction: row;
+      width: 70%;
+      height:100%;
+    } 
+    @include medium {
+      width: 60%;
+    }
+    @include large {
+      width: 50%;
+    }
+    @include xlarge {
+      width: 40%;
+    }
+
+    .itemActive {
+      text-decoration: none;
+      color: $green;
+    }
+  }
+
 }
 
 .active {
   transform: translateX(0);
   transition: .2s;
-}
-.navList {
-  height: 40%;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  &__itemActive {
-    text-decoration: none;
-    color: red;
-  }
-  @include small{
-    flex-direction: row;
-    width: 100%;
-    height:100%;
-  }
 }
