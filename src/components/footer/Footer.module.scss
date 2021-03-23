@@ -1,0 +1,35 @@
+@import '../../scss/global';
+
+.footer {
+  background: $light-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+
+  @include small {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  &__brands {
+    ul {
+      display: flex;
+
+      li {
+        margin-right: 1rem;
+      }
+    }
+  }
+  section {
+    margin: 0.5rem 0;
+  }
+}

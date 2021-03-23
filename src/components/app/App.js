@@ -4,7 +4,9 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import styles from './App.module.scss';
 
 import Header from '../header/Header';
+import Footer from '../footer/Footer';
 import Nav from '../nav/Nav';
+import Home from '../home/Home';
 
 import useScreenSize from '../../hooks/useScreenSize';
 
@@ -23,7 +25,8 @@ function App() {
       <Router>
         <Header menuIsActive={menuIsActive} toggleMenu={toggleMenu} screenWidth={screenWidth} />
         {screenWidth < 580 && <Nav menuIsActive={menuIsActive} />}
-        
+        <Route exact path="/" component={Home} />
+        <Footer/>
       </Router>
       
       

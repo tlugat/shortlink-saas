@@ -5,11 +5,11 @@ import NavLogo from '../nav/NavLogo/NavLogo';
 
 const Header = ({menuIsActive, toggleMenu, screenWidth}) => {
   return (
-    <div className={styles.header}>
-      <h1>ShortLink</h1>
+    <header className={styles.header}>
+      <h1 className={styles.header__logo}>ShortLink</h1>
       {screenWidth >= 580 && <Nav/>}
       {screenWidth < 580 && <NavLogo menuIsActive={menuIsActive} toggleMenu={toggleMenu}/>}
-    </div>
+    </header>
   )
 }
 
