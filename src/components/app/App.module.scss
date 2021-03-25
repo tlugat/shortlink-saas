@@ -1,5 +1,52 @@
+@import '../../scss/global';
 .App {
   width: 100vw;
   overflow: hidden;
   position: relative;
+  display: grid;
+  grid-template-rows: 10vh 1fr auto;
+  grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'SF UI Text Regular';
+  }
+
+  p,
+  li,
+  a,
+  h5,
+  h6,
+  button {
+    font-family: Helvetica;
+  }
+
+  h2 {
+    letter-spacing: -0.06em;
+    font-size: 32px;
+    color: $green;
+    font-weight: bold;
+    @include large {
+      font-size: 64px;
+    }
+  }
+
+
+}
+
+.App > header {
+  grid-area: header;
+}
+.App > main {
+  grid-area: main;
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+}
+.App > footer {
+  grid-area: footer;
 }

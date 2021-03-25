@@ -1,8 +1,10 @@
 @import '../../scss/global';
 
 .home {
-  
   width: 100%;
-  
+
+  @include large {
+    padding: 2rem;
+  }
 } 
 

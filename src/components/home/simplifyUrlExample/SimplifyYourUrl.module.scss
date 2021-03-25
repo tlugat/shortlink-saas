@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   height: 600px;
-
+  width: 100%;
   @include small {
     height: 500px;
   }
@@ -46,6 +46,10 @@
 
   &__text {
     text-align: center;
+    p:last-child {
+      color: $green;
+      font-weight: bold;
+    }
   }
 
 }

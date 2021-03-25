@@ -6,13 +6,13 @@ import CTA from '../../ui components/buttons/CTA';
 
 const SimplifyUrl = () => {
 
-  const [url, setUrl] = useState('MySimpleUrl.com');
+  const [url, setUrl] = useState('mysimpleurl.com');
 
   return (
     <article className={styles.simplifyUrl}>
       <div className={styles.container}>
         <div className={styles.simplifyUrl__field}>
-          <input onChange={(e) => setUrl(e.target.value)} placeholder="Please inquire your email here" type="text"/>
+          <input onChange={(e) => setUrl(e.target.value)} placeholder="my-super/compl/icated-a_5nd/long-4dhdfh-5f2/url.com" type="text"/>
           <CTA value="Shorten"/>
         </div>
       

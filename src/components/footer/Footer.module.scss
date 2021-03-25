@@ -1,19 +1,15 @@
 @import '../../scss/global';
 
 .footer {
+
   background: $light-grey;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   width: 100%;
-
-  @include small {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
 
   &__title {
     font-weight: 700;
@@ -31,5 +27,20 @@
   }
   section {
     margin: 0.5rem 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  @include small {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
   }
 }
