@@ -1,4 +1,4 @@
-import logo from '../../../assets/logos/landing-vector.svg';
+import img from '../../../assets/logos/landing-vector.svg';
 import styles from './Landing.module.scss';
 import CTA from '../../ui components/buttons/CTA';
 
@@ -14,7 +14,7 @@ const Landing = () => {
         </div>
       </div>
       <div>
-        <img src={logo} alt="a hand holding a browser window"/>
+        <img className={styles.landing__img} src={img} alt="a hand holding a browser window"/>
       </div>
     </article>
   )

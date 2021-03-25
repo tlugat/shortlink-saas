@@ -25,20 +25,7 @@
     justify-items: flex-end;
   }
 
-  &__profile {
-    height: 5rem;
-    width: 5rem;
-    background: no-repeat url('../../assets//img/placeholder-profile.jpg');
-    background-size: cover;
-    border-radius: 50px;
-    
-    @include small {
-      width: 2.5rem;
-      height: 2.5rem;
-      order: 1;
-      margin-left: auto;
-    }
-  }
+
 
   &__list {
     height: 40%;

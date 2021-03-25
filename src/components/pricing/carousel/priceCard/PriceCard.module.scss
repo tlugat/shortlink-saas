@@ -1,0 +1,81 @@
+@import '../../../../scss/global';
+
+.priceCard {
+  padding: 2rem;
+  box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 500px;
+  width: 250px;
+  color: #311D75;
+  border-radius: 5px;
+  @include xlarge {
+    width: 350px;
+  }
+  &:hover {
+    color: #fff;
+    background: #311D75;
+    ul {
+      color: #fff;
+      li > span > img {
+        fill: #fff;
+      }
+    }
+  }
+  
+
+  &__title {
+    font-weight: bold;
+  }
+  
+}
+
+.priceCard__features {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: rgba(49, 29, 117, 0.63);
+
+    li {
+      display: flex;
+      span {
+        margin-right: 0.5rem;
+
+        img {
+          color: red;
+        }
+      }
+    }
+   
+  }
+
+.priceCard__price {
+  span {
+    font-size: 48px;
+    font-weight: 700;
+    position: relative;
+    font-family: 'SF UI Text Regular';
+    &::after {
+      content: '/Month';
+      font-size: 14px;
+      position: absolute;
+      right: -50px;
+      top: 25%;
+    }
+  }
+}
+
+.priceCard__btn {
+  border-radius: 5px;
+  background: #311D75;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  &:hover {
+    background: #fff;
+    color: #311D75;
+  }
+}

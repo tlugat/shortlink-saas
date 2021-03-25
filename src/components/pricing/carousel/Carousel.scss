@@ -1,0 +1,35 @@
+@import '../../../scss//global';
+
+.priceCards {
+  @include medium {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  @include large {
+    width: 80%;
+  }
+  @include xlarge {
+    width: 60%;
+  }
+}
+
+.rec {
+  .rec-item-wrapper {
+    padding: 1rem 0 !important;
+  }
+  .rec-arrow {
+    background: none;
+    box-shadow: none;
+    &:hover {
+      background: initial;
+    }
+  }
+  .rec-dot {
+    box-shadow: none;
+    background: rgba(49, 29, 117, 0.29);
+  }
+  .rec-dot_active {
+    background: #311D75
+  }
+}
