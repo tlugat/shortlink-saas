@@ -1,17 +1,13 @@
 @import '../../../scss//global';
 
-.priceCards {
+.carouselWrapper {
   @include medium {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
-  @include large {
-    width: 80%;
-  }
-  @include xlarge {
-    width: 60%;
-  }
+ 
 }
 
 .rec {
