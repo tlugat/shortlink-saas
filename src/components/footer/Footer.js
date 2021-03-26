@@ -40,7 +40,10 @@ const Footer = () => {
           </ul>
         </section>
       </div>
-      <p>2021 ShortLInk | Made by group 5</p>
+      <div className={styles.footer__signature}>
+        <p>2021 ShortLInk | Made by group 5</p>
+      </div>
+      
     </footer>
   )
 }
