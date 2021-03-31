@@ -1,7 +1,7 @@
 import styles from './ItemCard.module.scss';
 
-import cross from '../../../../assets/logos/cross.svg';
-import check from '../../../../assets/logos/check.svg';
+import cross from '../../../../../assets/logos/cross.svg';
+import check from '../../../../../assets/logos/check.svg';
 
 const PriceCard = ({data}) => {
   const {title, price, summary, features} = data;
@@ -36,3 +36,4 @@ const PriceCard = ({data}) => {
 }
 
 export default PriceCard
+

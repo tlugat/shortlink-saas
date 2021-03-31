@@ -1,15 +1,8 @@
 @import '../../scss/global';
 .App {
-  width: 100vw;
-  overflow: hidden;
+  width: 100%;
   position: relative;
-  display: grid;
-  grid-template-rows: 10vh 1fr auto;
-  grid-template-areas: 
-    'header'
-    'main'
-    'footer';
-
+  overflow: hidden;
   h1,
   h2,
   h3 {
@@ -36,17 +29,4 @@
   }
 
 
-}
-
-.App > header {
-  grid-area: header;
-}
-.App > main {
-  grid-area: main;
-  width: 100%;
-  display: flex; 
-  justify-content: center;
-}
-.App > footer {
-  grid-area: footer;
 }

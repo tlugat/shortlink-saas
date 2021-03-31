@@ -1,8 +1,8 @@
-@import '../../scss//global';
+@import '../../../scss//global';
 
 .pricing {
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 0;
   @include medium {
     display: flex;
     flex-direction: column;

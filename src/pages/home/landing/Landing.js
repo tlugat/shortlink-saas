@@ -1,6 +1,6 @@
 import img from '../../../assets/logos/landing-vector.svg';
 import styles from './Landing.module.scss';
-import CTA from '../../ui components/buttons/CTA';
+import CTA from '../../../components/ui_components/buttons/CTA';
 
 const Landing = () => {
   return (

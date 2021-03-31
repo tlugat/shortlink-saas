@@ -1,5 +1,5 @@
 import Carousel from 'react-elastic-carousel';
-import useScreenSize from '../../../hooks/useScreenSize';
+import useScreenSize from '../../../../hooks/useScreenSize';
 import './Carousel.scss';
 import ItemCard from './itemCard/ItemCard';
 

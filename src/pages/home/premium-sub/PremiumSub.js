@@ -1,6 +1,6 @@
 import useScreenSize from '../../../hooks/useScreenSize';
 import styles from './Premium-sub.module.scss'
-import Btn from '../../ui components/buttons/CTA';
+import Btn from '../../../components/ui_components/buttons/CTA';
 import small from '../../../assets/img/dashboard-img-small.png'
 import large from '../../../assets/img/dashboard-img-large.png'
 

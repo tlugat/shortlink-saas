@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 import styles from './SimplifyYourUrl.module.scss';
 
-import CTA from '../../ui components/buttons/CTA';
+import CTA from '../../../components/ui_components/buttons/CTA';
 
 const SimplifyUrl = () => {
 
