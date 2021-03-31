@@ -6,7 +6,7 @@ import instagram_icon from '../../assets/logos/instagram-icon.svg';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+      <footer className={styles.footer}>
       <div className={styles.wrapper}>
         <section className={styles.footer__brands}>
           <h6 className={styles.footer__title}>ShortLink</h6>
@@ -43,7 +43,6 @@ const Footer = () => {
       <div className={styles.footer__signature}>
         <p>2021 ShortLInk | Made by group 5</p>
       </div>
-      
     </footer>
   )
 }
