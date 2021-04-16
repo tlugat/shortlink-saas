@@ -1,0 +1,48 @@
+@import '../../../../scss//global';
+  
+
+.switch {
+    border-radius: 50px;
+    width: 245px;
+    padding: 3px;
+    background: #F4F5FD;
+    
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        input[type="radio"] {
+            display: none;
+            &.toggle-left:checked ~ .cover {
+                transform: translateX(0);
+            }
+            &.toggle-right:checked ~ .cover {
+                transform: translateX(100%);
+            }
+            & + label {
+                padding: 0.5rem 1rem; 
+                z-index: 1;
+                cursor: pointer;
+                font-family: helvetica;
+            }
+            &:checked + label {
+                color: $green;
+            }
+        }
+        
+        .cover {
+            height: 100%;
+            width: 50%;
+            border-radius: 50px;
+            background: #fff;
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 0;
+            transition: ease-in-out .3s;
+        }
+    }
+
+}
+
+

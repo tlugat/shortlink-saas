@@ -11,7 +11,7 @@ const Home = () => {
       <Landing/>
       <SimplifyYourUrl/>
       <Carousel type="features" />
-      {/* <PremiumSub/> */}
+      <PremiumSub/>
     </div>
   )
 }

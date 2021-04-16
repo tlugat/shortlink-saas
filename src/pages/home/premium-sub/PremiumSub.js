@@ -12,13 +12,17 @@ const PremiumSub = () => {
   }
   return ( 
     <div className={styles.premiumSub}>
-     <img className={styles.premiumSub__item} src={img} alt="a dashboard screen on a computer"/> 
-     <div className={styles.premiumSub__item}>
-       <p>Enjoy an <span>exclusive</span> dashboard with our <span>premium subscription</span></p>
+      <div className={styles.premiumSub__item}>
+        <img  src={img} alt="a dashboard screen on a computer"/>
+      </div>
+     <div className={styles.premiumSub__item + ' ' + styles.teaser}>
+       <div className={styles.wrapper}>
+        <h3 className={styles.teaser__title}>Enjoy an <span>exclusive</span> dashboard with our <span>premium subscription</span></h3>
+        <p className={styles.teaser__text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sunt totam dolores corporis, molestias ipsa earum ab placeat esse explicabo iusto iure pariatur officia consequuntur, obcaecati tempora aspernatur amet sapiente.</p>
+       </div>
        <Btn value="View More"/>
      </div>
     </div>
-    
   )
 }
 

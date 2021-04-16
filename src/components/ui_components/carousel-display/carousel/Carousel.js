@@ -5,7 +5,7 @@ import ItemCard from './itemCard/ItemCard';
 
 
 
-const CarouselWrapper = ({type}) => {
+const CarouselWrapper = ({data, type}) => {
 
   const screenSize = useScreenSize().width;
 
@@ -13,10 +13,10 @@ const CarouselWrapper = ({type}) => {
     <div className='carouselWrapper'>
       {screenSize < 780 &&
         <Carousel>
-          {type.map((e,i)=><ItemCard key={i} data={e} />)}
+          {data.map((e,i)=><ItemCard type={type} key={i} data={e} />)}
         </Carousel>
       }
-      {screenSize >= 780 && type.map((e,i)=><ItemCard key={i} data={e} />)}
+      {screenSize >= 780 && data.map((e,i)=><ItemCard type={type} key={i} data={e} />)}
       
     </div>
     
