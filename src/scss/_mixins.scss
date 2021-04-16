@@ -21,3 +21,18 @@
     @content
   }
 };
+
+@mixin font-size($small, $medium, $large, $xlarge) {
+  @include small {
+    font-size: $small
+  }
+  @include medium {
+    font-size: $medium
+  }
+  @include large {
+    font-size: $large
+  }
+  @include xlarge {
+    font-size: $xlarge
+  }
+}

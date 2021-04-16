@@ -9,18 +9,24 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+  
   @include medium {
     flex-direction: row;
     height: auto;
+    padding: 2rem 2rem;
   }
   @include large {
     justify-content: space-between;
   }
   h2 {
-    font-size: 36px;
+    @include font-size(48px, 64px, 76px, 88px);
     font-weight: bold;
     color: $green;
     
+  }
+  p {
+    line-height: 1.2;
+    max-width: 75%;
   }
   &__img {
     @include large {
@@ -42,7 +48,7 @@
     max-width: 400px;
    
     @include medium {
-      max-width: 500px;
-      height: 300px;
+      max-width: 800px;
+      height: 400px;
     }
   }

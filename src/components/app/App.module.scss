@@ -20,13 +20,14 @@
 
   h2 {
     letter-spacing: -0.06em;
-    font-size: 32px;
+    font-size: $h2;
     color: $green;
     font-weight: bold;
-    @include large {
-      font-size: 64px;
-    }
+    @include font-size($h2-small, $h2-medium, $h2-large, $h2-xlarge)
   }
 
+  main {
+    margin-top: 8vh;
+  }
 
 }
