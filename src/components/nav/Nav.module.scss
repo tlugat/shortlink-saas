@@ -55,6 +55,18 @@
     .itemActive {
       color: $green;
       font-weight: bold;
+      position: relative;
+     
+      &::after {
+        content:'';
+        height: 0.2rem;
+        width: 100%;
+        background: $dark-green;
+        position: absolute;
+        bottom: -1.5rem;
+        left: 0;
+        border-radius: 50px;
+      }
     }
   }
 
