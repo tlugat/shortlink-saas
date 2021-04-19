@@ -1,0 +1,58 @@
+@import '../../scss//global';
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
+  &__title {
+    @include medium {
+      margin-bottom: 2rem;
+    }
+    p {
+      padding: 2rem 0;
+    }
+  }
+  &__cards {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    @include large {
+      width: 75%;
+    }
+  }
+  &__img {
+    @include small {
+      width: 400px;
+    }
+    @include medium {
+      width: 800px;
+    }
+    @include large {
+      width: 1070px;
+    }
+  }
+  
+}
+
+
+.rec {
+  .rec-item-wrapper {
+    padding: 1rem 0 !important;
+  }
+  .rec-arrow {
+    background: none;
+    box-shadow: none;
+    &:hover {
+      background: initial;
+    }
+  }
+  .rec-dot {
+    box-shadow: none;
+    background: rgba(49, 29, 117, 0.29);
+  }
+  .rec-dot_active {
+    background: #311D75
+  }
+}

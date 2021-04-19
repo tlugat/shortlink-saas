@@ -1,28 +1,32 @@
 import useScreenSize from '../../../hooks/useScreenSize';
 import styles from './Premium-sub.module.scss'
 import Btn from '../../../components/ui_components/buttons/CTA';
-import small from '../../../assets/img/dashboard-img-small.png'
-import large from '../../../assets/img/dashboard-img-large.png'
+import computer_small from '../../../assets/img/dashboard-img-small.png'
+import computer_large from '../../../assets/img/dashboard-img-large.png'
+
 
 const PremiumSub = () => {
   const screenSize = useScreenSize().width;
-  let img = small;
+  let computer = computer_small;
+
   if(screenSize >= 768) {
-    img = large
+    computer = computer_large;
+
   }
   return ( 
-    <div className={styles.premiumSub}>
-      <div className={styles.premiumSub__item}>
-        <img  src={img} alt="a dashboard screen on a computer"/>
+    <article className={styles.premiumSub}>
+      <div className={styles.premiumSub__background}>
+        {/* <img src={ring} alt="gold ring"/>
+        <img src={card} alt="browser window vector"/>
+        <img src={hand} alt="OK sign with a hand"/> */}
+        <div className={styles.premiumSub__wrapper}>
+        <h3 className={styles.title}>Enjoy an exclusive dashboard with our premium subscription</h3>
+        <Btn light value="View More"/>
       </div>
-     <div className={styles.premiumSub__item + ' ' + styles.teaser}>
-       <div className={styles.wrapper}>
-        <h3 className={styles.teaser__title}>Enjoy an <span>exclusive</span> dashboard with our <span>premium subscription</span></h3>
-        <p className={styles.teaser__text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid sunt totam dolores corporis, molestias ipsa earum ab placeat esse explicabo iusto iure pariatur officia consequuntur, obcaecati tempora aspernatur amet sapiente.</p>
-       </div>
-       <Btn value="View More"/>
-     </div>
-    </div>
+      </div>
+     
+     <img className={styles.premiumSub__img} src={computer} alt="dashboard interface on a computer screen"/>
+    </article>
   )
 }
 
