@@ -1,16 +1,19 @@
 @import '../../../scss/global';
 
 .cta {
-  background: $green;
+  background: $green-gradient;
   color: #fff;
   border: none;
   border-radius: 5px;
-  width: 123px;
-  height: 34px;
+  width: 128px;
+  height: 40px;
   cursor: pointer;
 }  
-.light {
+.white{
     background: #fff;
-    border: solid 1px $green;
     color: $green; 
   }
+.light {
+  background: none;
+  border: solid #fff 1px;
+}

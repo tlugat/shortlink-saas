@@ -12,7 +12,7 @@
   justify-content: space-evenly;
   align-items: center;
   transition: .2s;
-  z-index: 1;
+  z-index: 2;
 
   @include small{
     background: none;
@@ -34,11 +34,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
+    
     @include small{
       flex-direction: row;
       width: 70%;
       height:100%;
+
+      
     } 
     @include medium {
       width: 60%;
@@ -51,8 +53,8 @@
     }
 
     .itemActive {
-      text-decoration: none;
       color: $green;
+      font-weight: bold;
     }
   }
 
