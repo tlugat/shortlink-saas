@@ -40,13 +40,23 @@
     align-items: center;
     justify-content: space-around;
     text-align: center;
-   
+    position: relative;
+
     @include medium {
       text-align: left;
       align-items: flex-start;
       padding-left: 1rem;
     }
-    
+    // &::after {
+    //   content: '';
+    //   height: 100%;
+    //   width: 100%;
+    //   position: absolute;
+    //   top: 20%;
+    //   left: 10%;
+    //   background: lightgreen;
+    //   z-index: -1;
+    // }
   }
 }
 
