@@ -7,6 +7,7 @@
   text-align: center;
   padding-top: 2rem;
   &__title {
+    padding: 0 2rem;
     @include medium {
       margin-bottom: 2rem;
     }

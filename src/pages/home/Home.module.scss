@@ -7,7 +7,7 @@
   @include small {
     padding: 2rem;
   }
-  article>* {
+  &>article {
     margin-bottom: 2rem;
   }
 } 
