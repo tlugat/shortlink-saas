@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from '../../errors/ErrorFallBack';
 import useScreenSize from '../../hooks/useScreenSize';
@@ -11,8 +11,8 @@ import Footer from '../footer/Footer';
 import Nav from '../nav/Nav';
 import Home from '../../pages/home/Home';
 import Pricing from '../../pages/pricing/Pricing';
-
-
+import Login from '../../pages/login/Login';
+import Signup from '../../pages/signup/Signup';
 
 function App() {
   const screenWidth = useScreenSize().width;
@@ -31,7 +31,8 @@ function App() {
             {screenWidth < 580 && <Nav screenWidth={screenWidth} menuIsActive={menuIsActive} />}
             <main>
               <Route exact path="/" component={Home} />
-              <Route exact path ="/pricing" component={() => <Pricing/>}/>
+              <Route exact path ="/pricing" component={Pricing}/>
+              <Route exact path="/signup" component={Signup}/>
             </main>
           <Footer/>
         </Router>
