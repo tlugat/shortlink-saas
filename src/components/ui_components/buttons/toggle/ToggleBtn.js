@@ -1,12 +1,8 @@
-import {useState} from 'react';
 import './ToggleBtn.scss';
 
 
 const ToggleBtn = ({values, handleToggleRate}) => {
   
-
-  
-
   return ( 
     <div className="switch">
       <div className="switch__container">

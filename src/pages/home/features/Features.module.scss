@@ -1,0 +1,30 @@
+@import '../../../scss/global';
+
+.features {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  &__title {
+    padding: 0 2rem;
+    @include medium {
+      margin-bottom: 2rem;
+    }
+    p {
+      padding: 2rem 0;
+    }
+  }
+
+  &__cards {
+    @include medium {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+    }
+    @include large {
+      width: 75%;
+    }
+  }
+}
