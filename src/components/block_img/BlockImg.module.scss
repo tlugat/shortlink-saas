@@ -1,0 +1,48 @@
+@import '../../scss/global';
+
+.block {
+  height: 300px;
+  width: 100%;
+  max-width: 450px;
+  background: $green-gradient;
+  border-radius: 10px;
+  position: relative;
+  @include large {
+    height: 680px;
+  }
+  @include xlarge {
+    max-width: 666px;
+  }
+  h3 {
+      color: #fff;
+      font-size: 24px;
+      @include font-size(32px, 36px, 48px, 56px);
+      font-weight: 800;
+      padding: 1rem;
+      @include medium {
+        padding: 2rem;
+      }
+    }
+    img {
+      position: absolute;
+      bottom: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      @include large {
+        bottom: -15%;
+      }
+    }
+  // &__square {
+  //   height: 75%;
+  //   background: $green-gradient;
+  //   border-radius: 10px;
+  //   position: relative;
+  //   @include large {
+  //     width: 450px;
+  //     height: 80%;
+  //   }
+  //   @include xlarge {
+  //     width: 666px;
+  //   }
+    
+  }

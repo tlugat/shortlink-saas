@@ -1,94 +1,62 @@
 @font-face {
-  font-family: 'SF UI Text Regular';
+  font-family: 'SF UI Display Ultralight';
   font-style: normal;
   font-weight: normal;
-  src: local('SF UI Text Regular'), url('../assets/fonts/SF_UI_TEXT/SFUIText-Regular.woff') format('woff');
+  src: local('SF UI Display Ultralight'), url('../assets/fonts/SF-UI-DISPLAY/sf-ui-display-ultralight-58646b19bf205.woff') format('woff');
   }
   
 
   @font-face {
-  font-family: 'SF UI Text Italic';
+  font-family: 'SF UI Display Thin';
   font-style: normal;
   font-weight: normal;
-  src: local('SF UI Text Italic'), url('../assets/fonts/SF_UI_TEXT/SFUIText-RegularItalic.woff') format('woff');
+  src: local('SF UI Display Thin'), url('../assets/fonts/SF-UI-DISPLAY/sf-ui-display-thin-58646e9b26e8b.woff') format('woff');
   }
   
 
   @font-face {
-  font-family: 'SF UI Text Light';
+  font-family: 'SF UI Display Light';
   font-style: normal;
   font-weight: normal;
-  src: local('SF UI Text Light'), url('../assets/fonts/SF_UI_TEXT/SFUIText-Light.woff') format('woff');
+  src: local('SF UI Display Light'), url('../assets/fonts/SF-UI-DISPLAY/sf-ui-display-light-58646b33e0551.woff') format('woff');
   }
   
 
   @font-face {
-  font-family: 'SF UI Text Light Italic';
+  font-family: 'SF UI Display Medium';
   font-style: normal;
   font-weight: normal;
-  src: local('SF UI Text Light Italic'), url('../assets/fonts/SF_UI_TEXT/SFUIText-LightItalic.woff') format('woff');
+  src: local('SF UI Display Medium'), url('../assets/fonts/SF-UI-DISPLAY/sf-ui-display-medium-58646be638f96.woff') format('woff');
   }
   
 
   @font-face {
-  font-family: 'SF UI Text Medium';
+  font-family: 'SF UI Display Semibold';
   font-style: normal;
   font-weight: normal;
-  src: local('SF UI Text Medium'), url('../assets/fonts/SF_UI_TEXT/SFUIText-Medium.woff') format('woff');
+  src: local('SF UI Display Semibold'), url('../assets/fonts/SF-UI-DISPLAY/sf-ui-display-semibold-58646eddcae92.woff') format('woff');
   }
   
 
   @font-face {
-  font-family: 'SF UI Text Medium Italic';
+  font-family: 'SF UI Display Bold';
   font-style: normal;
   font-weight: normal;
-  src: local('SF UI Text Medium Italic'), url('../assets/fonts/SF_UI_TEXT/SFUIText-MediumItalic.woff') format('woff');
+  src: local('SF UI Display Bold'), url('../assets/fonts/SF-UI-DISPLAY/sf-ui-display-bold-58646a511e3d9.woff') format('woff');
   }
   
 
   @font-face {
-  font-family: 'SF UI Text Semibold';
+  font-family: 'SF UI Display Heavy';
   font-style: normal;
   font-weight: normal;
-  src: local('SF UI Text Semibold'), url('../assets/fonts/SF_UI_TEXT/SFUIText-Semibold.woff') format('woff');
+  src: local('SF UI Display Heavy'), url('../assets/fonts/SF-UI-DISPLAY/sf-ui-display-heavy-586470160b9e5.woff') format('woff');
   }
   
 
   @font-face {
-  font-family: 'SF UI Text Semibold Italic';
+  font-family: 'SF UI Display Black';
   font-style: normal;
   font-weight: normal;
-  src: local('SF UI Text Semibold Italic'), url('../assets/fonts/SF_UI_TEXT/SFUIText-SemiboldItalic.woff') format('woff');
-  }
-  
-
-  @font-face {
-  font-family: 'SF UI Text Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local('SF UI Text Bold'), url('../assets/fonts/SF_UI_TEXT/SFUIText-Bold.woff') format('woff');
-  }
-  
-
-  @font-face {
-  font-family: 'SF UI Text Bold Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local('SF UI Text Bold Italic'), url('../assets/fonts/SF_UI_TEXT/SFUIText-BoldItalic.woff') format('woff');
-  }
-  
-
-  @font-face {
-  font-family: 'SF UI Text Heavy';
-  font-style: normal;
-  font-weight: normal;
-  src: local('SF UI Text Heavy'), url('../assets/fonts/SF_UI_TEXT/SFUIText-Heavy.woff') format('woff');
-  }
-  
-
-  @font-face {
-  font-family: 'SF UI Text Heavy Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local('SF UI Text Heavy Italic'), url('../assets/fonts/SF_UI_TEXT/SFUIText-HeavyItalic.woff') format('woff');
+  src: local('SF UI Display Black'), url('../assets/fonts/SF-UI-DISPLAY/sf-ui-display-black-58646a6b80d5a.woff') format('woff');
   }
