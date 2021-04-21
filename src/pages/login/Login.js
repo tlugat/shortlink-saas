@@ -1,8 +1,9 @@
+import Connexion from '../../components/connexion/Connexion';
 
 const Login = () => {
   return (
     <section>
-      <h1>login</h1>
+      <Connexion/>
     </section>
   )
 }

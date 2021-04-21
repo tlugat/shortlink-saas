@@ -25,12 +25,10 @@
     }
     img {
       position: absolute;
-      bottom: -30%;
+      bottom: -3rem;
       left: 50%;
       transform: translateX(-50%);
-      @include large {
-        bottom: -15%;
-      }
+     
     }
   // &__square {
   //   height: 75%;
