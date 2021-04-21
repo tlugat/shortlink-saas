@@ -1,7 +1,9 @@
 import {Formik, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 import styles from './Signup.module.scss';
-
+import img_small from '../../assets/img/signup/signup-img-small.png';
+import img_large from '../../assets/img/signup/signup-img-large.png';
+import BlockImg from '../../components/block_img/BlockImg';
 
 const CustomInput = ({field, form, ...props}) => {
   return (
@@ -32,8 +34,13 @@ const Signup = () => {
   } 
 
   return (
-    <div className={styles.formWrapper}>
-      <h2 className={styles.formWrapper__title}>Sign up.</h2>
+    <div className={styles.signUp}>
+      <div className={styles.signUp__formContainer}>
+        <div className={styles.signUp__title}>
+        <h2 >Sign up.</h2>
+        <p>Welcome new user !</p>
+      </div>
+      
       <Formik 
       onSubmit={submit} 
       initialValues={{lastName: "", firstName: "", email: "", tel: "", password: ""}}
@@ -59,10 +66,14 @@ const Signup = () => {
             <ErrorMessage name="tel" component={CustomError} />
             <Field name="password" type="password"  component={CustomInput} />
             <ErrorMessage name="password" component={CustomError} />
-            <button type="submit" disabled={isSubmitting}>Envoyer</button>
+            <button type="submit" disabled={isSubmitting}>Sign up</button>
           </form>
+          
         )}
-      </Formik>
+      </Formik> 
+      </div>
+     
+      <BlockImg imgSmall={img_small} imgLarge={img_large}/>
     </div>
   )
 }

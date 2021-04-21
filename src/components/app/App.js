@@ -32,6 +32,7 @@ function App() {
             <main>
               <Route exact path="/" component={Home} />
               <Route exact path ="/pricing" component={Pricing}/>
+              <Route exact path="/login" component={Login}/>
               <Route exact path="/signup" component={Signup}/>
             </main>
           <Footer/>
