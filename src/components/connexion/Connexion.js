@@ -21,13 +21,13 @@ const Connexion = ({location}) => {
     <div className={styles.connexion} >
       <div className={styles.container}>
         <div className={styles.connexion__title}>
-          <h2>{location === "/signup" ? "Sign Up." : "Login."}</h2>
-          <p>{location === "/signup" ? "Welcome new user !" : "We are happy to see your here !"}</p>
+          <h2>{location.pathname === "/signup" ? "Sign Up." : "Login."}</h2>
+          <p>{location.pathname === "/signup" ? "Welcome new user !" : "We are happy to see your here !"}</p>
         </div>
-        <Form location={location} />
+        <Form location={location.pathname} />
       </div>
       
-      <BlockImg location={location} imgSmall={imgSmall} imgLarge={imgLarge}/>
+      <BlockImg location={location.pathname} imgSmall={imgSmall} imgLarge={imgLarge}/>
     </div>
     
   )

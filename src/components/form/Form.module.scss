@@ -35,4 +35,7 @@
       padding: 1rem 3rem;
     }
   }
+  p > span > a {
+    color: $dark-green;
+  }
 }
