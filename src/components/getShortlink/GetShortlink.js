@@ -2,6 +2,8 @@ import styles from './GetShortlink.module.scss'
 import {useState} from 'react'
 import CTA from '../ui_components/buttons/CTA';
 import copy_link from '../../assets/logos/content_copy.svg';
+import QRCode from 'qrcode.react';
+
 
 const GetShortlink = () => {
 
@@ -11,19 +13,20 @@ const GetShortlink = () => {
 
   const handleLink = (value) => {
     setUrl(value)
-    console.log(url)
-  } 
+  }
 
   const getShortlink = () => {
     const axios = require('axios')
 
-    axios.post('http://localhost:5000/api/url/shorten', {
-        longUrl: {url},
+    axios.post('http://shorty-api-shortlink.herokuapp.com/api/url/shorten', {
+        longUrl: url,
     })
     .then((response) => setNewUrl(response))
     .catch((error) => console.log(error));
   }
   
+
+
   // const handleShorten = () => {
   //   error && setError(false);
   //   let test = url;
@@ -56,6 +59,7 @@ const GetShortlink = () => {
             {!error && <span onClick={() => navigator.clipboard.writeText(newUrl)} ><img src={copy_link} alt="copy logo" /></span>}
           </div>
         </div>
+        <QRCode value={newUrl} />
     </article>
   )
 }
