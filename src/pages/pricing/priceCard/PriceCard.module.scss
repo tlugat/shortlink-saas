@@ -17,6 +17,11 @@
   }
   &:hover {
     background: #311D75;
+    &>ul>li>span>img {
+      background: #fff;
+      padding: 0.2rem;
+      border-radius: 5px;
+    }
     >* {
       color: #fff
     }
@@ -83,20 +88,4 @@
   cursor: pointer;
 }
 
-.green {
-  .priceCard__title {
-    color:$green;
-  }
-  .priceCard__summary {
-    color: #ABABAB
-  }
-  &:hover {
-    background: $green;
-  
-    >* {
-      color: #fff
-    }
-
-  }
-}
 
