@@ -8,12 +8,12 @@ const PriceCard = ({data}) => {
   const {title, price, monthlyPrice, yearlyPrice, summary, features} = data;
 
   const feats = ['Dashboard access', 'Live informations', 'QR code', 'UTM Builder', 'API Access'];
-
+  
   return (
     <div className={styles.priceCard}>
       <h3 className={styles.priceCard__title}>{title}</h3>
         <div className={styles.priceCard__price}>
-          <span className={price === "yearly" && styles.yearly}>{price === "yearly" ? yearlyPrice : monthlyPrice}</span>
+          <span className={price === "yearly" ? styles.yearly : undefined}>{price === "yearly" ? yearlyPrice : monthlyPrice}</span>
         </div>
       <p className={styles.priceCard__summary} >{summary}</p>
       <ul className={styles.priceCard__features}>

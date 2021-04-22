@@ -34,6 +34,7 @@ function App() {
               <Route exact path ="/pricing" component={Pricing}/>
               <Route exact path="/login" component={Connexion}/>
               <Route exact path="/signup" component={Connexion}/>
+              <Route exact path="/dashboard" component={Dashboard}/>
             </main>
           <Footer/>
         </Router>

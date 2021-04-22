@@ -10,11 +10,15 @@ const Header = ({menuIsActive, toggleMenu, screenWidth}) => {
   return (
     <header className={styles.header}>
       <div className={styles.wrapper}>
-        <h1 className={styles.header__logo}><img src={logo} alt="brand logo"/></h1>
+        <Link to="/" ><h1 className={styles.header__logo}><img src={logo} alt="brand logo"/></h1></Link>
         {screenWidth >= 580 && <Nav/>}
         {screenWidth < 580 && <NavLogo menuIsActive={menuIsActive} toggleMenu={toggleMenu}/>}
-        {screenWidth >= 580 && <Link to="/login"><CTA value="Login" customStyles={{border: "none", color: "#4D9CA1", background: "#fff"}} /></Link>}
-        {screenWidth >= 580 && <Link to="/signup"><CTA value="Sign Up" customStyles={{border: "solid 1px #4D9CA1", color: "#4D9CA1", background: "#fff"}} /></Link>}
+        
+        <div className={styles.connexion}>
+          {screenWidth >= 768 && <Link className={styles.login} to="/login"><CTA value="Login" customStyles={{border: "none", color: "#4D9CA1", background: "#fff"}} /></Link>}
+          {screenWidth >= 580 && <Link to="/signup"><CTA value="Sign Up" customStyles={{border: screenWidth >= 780 && "solid 1px #4D9CA1", color: "#4D9CA1", background: "#fff"}} /></Link>}
+        </div>
+        
       </div>
       
     </header>

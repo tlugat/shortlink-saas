@@ -17,15 +17,20 @@
   .wrapper {
     width:100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 2;
+    &>* {
+      flex: 1;
+    }
   }
   
   &__logo {
-    margin-right: auto;
     color: $green;
     font-weight: 900;
   }
-  
+.connexion {
+  display: flex;
+  justify-content: flex-end;
+}
 }
