@@ -13,6 +13,7 @@ import Home from '../../pages/home/Home';
 import Pricing from '../../pages/pricing/Pricing';
 import Connexion from '../connexion/Connexion';
 import Dashboard from '../../pages/dashboard/Dashboard'
+import Doc from '../../pages/doc/Doc'
 
 function App() {
   const screenWidth = useScreenSize().width;
@@ -32,9 +33,10 @@ function App() {
             <main>
               <Route exact path="/" component={Home} />
               <Route exact path ="/pricing" component={Pricing}/>
+              <Route exact path="/doc" component={Doc}/>
+              <Route exact path="/dashboard" component={Dashboard}/>
               <Route exact path="/login" component={Connexion}/>
               <Route exact path="/signup" component={Connexion}/>
-              <Route exact path="/dashboard" component={Dashboard}/>
             </main>
           <Footer/>
         </Router>
