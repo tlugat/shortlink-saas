@@ -11,7 +11,7 @@ import {NavLink} from 'react-router-dom'
 const Nav = ({menuIsActive, screenWidth}) => {
   
   const classes = cx(styles.nav, menuIsActive  && styles.active);
-  
+
   return (
     <nav className={classes}>
       <ul className={styles.nav__list}>

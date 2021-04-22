@@ -19,8 +19,8 @@ const CustomError = (props) => <div>{props.children}</div>
 const Form = ({location}) => {
   
   const userSchemaLogIn = Yup.object().shape({
-    email: Yup.string().email("E-mail erroné").required('Ce champs est obligatoire'),
-    password: Yup.string().min(8, '8 caractères min.').max(20, '20 caractères max.').required('Ce champs est obligatoire'),
+    email: Yup.string().email("E-mail erroné").min(6, '6 caractères min.').max(20, '20 caractères max.').required('Ce champs est obligatoire'),
+    password: Yup.string().min(6, '6 caractères min.').max(20, '20 caractères max.').required('Ce champs est obligatoire'),
   });
 
   const userSchemaSignup = Yup.object().shape({
@@ -28,7 +28,7 @@ const Form = ({location}) => {
     firstName: Yup.string().min(2, 'Le prénom renseigné est trop court').required('Ce champs est obligatoire'),
     email: Yup.string().email("E-mail erroné").required('Ce champs est obligatoire'),
     tel: Yup.number().min(9, 'Numéro erroné (trop court)').required('Ce champs est obligatoire'),
-    password: Yup.string().min(8, '8 caractères min.').max(20, '20 caractères max.'),
+    password: Yup.string().min(6, '6 caractères min.').max(20, '20 caractères max.'),
   });
 
   const submitSignup = (values, actions) => {

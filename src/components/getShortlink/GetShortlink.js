@@ -14,9 +14,15 @@ const GetShortlink = () => {
     console.log(url)
   } 
 
-  // const GetSHortLink = () => {
-  //   fetch()
-  // }
+  const getShortlink = () => {
+    const axios = require('axios')
+
+    axios.post('http://localhost:5000/api/url/shorten', {
+        longUrl: {url},
+    })
+    .then((response) => setNewUrl(response))
+    .catch((error) => console.log(error));
+  }
   
   // const handleShorten = () => {
   //   error && setError(false);
@@ -39,7 +45,7 @@ const GetShortlink = () => {
       <h2>Get your shortlink simply and quickly!</h2>
         <div className={styles.getShortlink__field}>
           <input aria-label="link" id="link" name="link" onChange={(e) => handleLink(e.target.value)} placeholder="yourUrl/super-compli/cated/and/long.com" type="text"/>
-          <CTA  value="Shorten"/>
+          <CTA onClickMethod={getShortlink}  value="Shorten"/>
         </div>
       
         <div className={styles.getShortlink__text}>
