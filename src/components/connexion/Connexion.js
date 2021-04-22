@@ -12,7 +12,7 @@ const Connexion = ({location}) => {
   let imgSmall = login_img_small
   let imgLarge = login_img_large
 
-  if(location === "/signup") {
+  if(location.pathname === "/signup") {
     imgSmall = signup_img_small;
     imgLarge = signup_img_large;
   } 

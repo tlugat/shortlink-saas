@@ -34,6 +34,7 @@
     }
     &__text {
       max-width: 463px;
+      
       @include xlarge {
         max-width: 550px;
       }
@@ -43,6 +44,10 @@
       p {
         color: #555555;
         line-height: 21px;
+        font-family: 'SF UI Display Light';
+        &>ul>li {
+          font-family: 'SF UI Display Light';
+        }
       }
     }
     &__example {
