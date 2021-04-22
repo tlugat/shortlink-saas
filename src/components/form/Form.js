@@ -60,15 +60,15 @@ const Form = ({location}) => {
           touched
         }) => (
           <form action="../../back-end/pdo.php" onSubmit={handleSubmit} className={styles.form}>
-            <Field name="lastName" component={CustomInput} />
+            <Field name="Lastname" component={CustomInput} />
             <ErrorMessage name="lastName" component={CustomError} />
-            <Field name="firstName" component={CustomInput} />
+            <Field name="Firstname" component={CustomInput} />
             <ErrorMessage name="firstName" component={CustomError} />
-            <Field name="email" type="email" component={CustomInput} />
+            <Field name="Email" type="email" component={CustomInput} />
             <ErrorMessage name="email" component={CustomError} />
-            <Field name="tel" type="number" component={CustomInput} />
+            <Field name="Phone Number" type="number" component={CustomInput} />
             <ErrorMessage name="tel" component={CustomError} />
-            <Field name="password" type="password"  component={CustomInput} />
+            <Field name="Password" type="password"  component={CustomInput} />
             <ErrorMessage name="password" component={CustomError} />
             <button type="submit" disabled={isSubmitting}>Sign up</button>
           </form>
@@ -92,9 +92,9 @@ const Form = ({location}) => {
           touched
         }) => (
           <form onSubmit={handleSubmit} className={styles.form}>
-            <Field name="email" type="email" component={CustomInput} />
+            <Field name="Email" type="email" component={CustomInput} />
             <ErrorMessage name="email" component={CustomError} />
-            <Field name="password" type="password"  component={CustomInput} />
+            <Field name="Password" type="password"  component={CustomInput} />
             <ErrorMessage name="password" component={CustomError} />
             <button type="submit" disabled={isSubmitting}>Login</button>
             <p>Don't have an account ? <span><Link to="/signup">Sign up</Link></span></p>

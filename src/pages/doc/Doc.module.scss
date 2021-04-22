@@ -45,9 +45,10 @@
         color: #555555;
         line-height: 21px;
         font-family: 'SF UI Display Light';
-        &>ul>li {
-          font-family: 'SF UI Display Light';
-        }
+      }
+      &>ul>li {
+        font-family: 'SF UI Display Light' !important;
+        color: #555555;
       }
     }
     &__example {
