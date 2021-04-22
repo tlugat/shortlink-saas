@@ -1,0 +1,10 @@
+@import '../../scss//global';
+
+.dashboard {
+  height: calc(100vh - 60px);
+  background: rgb(206, 231, 255);
+  &__module {
+    background: #fff;
+    border-radius: 10px;
+  }
+}

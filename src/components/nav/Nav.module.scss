@@ -2,6 +2,7 @@
 
 .nav {
   width: 100%;
+  max-width: 400px;
   height: 100vh;
   background: #fff;
   position: absolute;
@@ -23,7 +24,7 @@
     width: 75%;
     position:unset;
     flex-direction: row;
-    justify-items: flex-end;
+    justify-content: center;
   }
 
   &__img {
@@ -32,26 +33,26 @@
 
   &__list {
     height: 40%;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     
     @include small{
       flex-direction: row;
-      width: 70%;
-      height:100%;   
+      // width: 70%;
+      // height:100%;   
     } 
-    @include medium {
-      width: 60%;
-    }
-    @include large {
-      width: 50%;
-    }
-    @include xlarge {
-      width: 40%;
-    }
+    // @include medium {
+    //   width: 60%;
+    // }
+    // @include large {
+    //   width: 50%;
+    // }
+    // @include xlarge {
+    //   width: 40%;
+    // }
     &>li {
       display: flex;
       align-items: flex-end;
@@ -66,7 +67,6 @@
         color: $dark-green;
         @include small {
           color: #151515;
-          font-weight: 700;
           font-size: 14px;
         }
       }
