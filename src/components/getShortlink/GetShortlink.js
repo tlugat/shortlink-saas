@@ -15,13 +15,18 @@ const GetShortlink = () => {
     setUrl(value)
   }
 
+  const handleShortlink = (response) => {
+    const shortlink = response.data.shortUrl
+    setNewUrl(shortlink)
+  }
+
   const getShortlink = () => {
     const axios = require('axios')
 
     axios.post('http://shorty-api-shortlink.herokuapp.com/api/url/shorten', {
         longUrl: url,
     })
-    .then((response) => setNewUrl(response))
+    .then((response) => handleShortlink(response))
     .catch((error) => console.log(error));
   }
   

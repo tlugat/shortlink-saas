@@ -8,7 +8,7 @@ const Landing = () => {
   return (
     <article className={styles.landing}>
       <div>
-         <div className={styles.wrapper}>
+        <div className={styles.wrapper}>
           <Tilt>
             <h2>A easier way to share links</h2>
           </Tilt>
@@ -18,7 +18,6 @@ const Landing = () => {
           <CTA light value={'Info'}/>
         </div>
       </div>
-
       <img className={styles.landing__img} src={img} alt="woman scrolling on her phone"/>
       </div>
     </article>

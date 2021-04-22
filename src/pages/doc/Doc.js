@@ -28,22 +28,47 @@ const Doc = () => {
               <br/>
               <br/>
               <br/>
+              </p>
               <span>How it works :</span>
               <br/>
               <br/>
+              
               <ul>
                 <li>• Generate an access token.</li>
                 <br/>
                 <li>• You'll use the POST method to the /v4/shorten endpoint. Append your access token as a header in your request.</li>
               </ul>
-            </p>
+            
             <br/>
             <br/>
             <br/>
             <p>Here's an example: Authorization: Bearer {"{token}"}:</p>
             <br/>
           </div>
-          <div className={styles.article__example}><ExampleCard/></div>    
+          <div className={styles.article__example}>
+            <ExampleCard 
+              header={<span>POST /v4/shorten <br/>http://localhost:5000/api/url/shorten</span>}
+              body={
+                <p>
+                  <br/>
+                  <span style={{color: '#FFBA31'}} >"_id":</span> <span style={{color:'#FFFFC7'}}>"608187c48ff045055c6bcded"</span>,
+                  <br/>
+                  <span style={{color: '#FFBA31'}} >"longUrl":</span> <span style={{color:'#FFFFC7'}}>"https://manganelo.com/manga/lr922610"</span>,
+                  <br/>
+                  <span style={{color: '#FFBA31'}} >"shortUrl":</span> <span style={{color:'#FFFFC7'}}>"http://localhost:5000/5Mo-pMY41"</span>,
+                  <br/>
+                  <span style={{color: '#FFBA31'}} >"urlCode":</span> <span style={{color:'#FFFFC7'}}>"5Mo-pMY41"</span>,
+                  <br/>
+                  <span style={{color: '#FFBA31'}} >"userId":</span> <span style={{color:'#FFFFC7'}}>""</span>,
+                  <br/>
+                  <span style={{color: '#FFBA31'}} >"date":</span> <span style={{color:'#FFFFC7'}}>"Thu Apr 22 2021 16:27:16 GMT+0200 (heure d’été d’Europe centrale)"</span>,
+                  <br/>
+                  <span style={{color: '#FFBA31'}} >"__v":</span> <span style={{color:'#FFFFC7'}}>0</span>
+                  <br/>
+                </p>
+              } 
+            />
+              </div>    
         </article>
       </div>
       

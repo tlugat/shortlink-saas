@@ -7,7 +7,7 @@ import check from '../../../assets/logos/check.svg';
 const PriceCard = ({data}) => {
   const {title, price, monthlyPrice, yearlyPrice, summary, features} = data;
 
-  const feats = ['Dashboard access', 'Live informations', 'QR code', 'UTM Builder', 'API Access'];
+  const feats = ['1 users', '10 shortlinks/month', 'Generate QR code', 'Dashboard access', 'Custom your url'];
   
   return (
     <div className={styles.priceCard}>
@@ -15,7 +15,7 @@ const PriceCard = ({data}) => {
         <div className={styles.priceCard__price}>
           <span className={price === "yearly" ? styles.yearly : undefined}>{price === "yearly" ? yearlyPrice : monthlyPrice}</span>
         </div>
-      <p className={styles.priceCard__summary} >{summary}</p>
+      <p className={styles.priceCard__summary}>{summary}</p>
       <ul className={styles.priceCard__features}>
         { feats.map((feature, i) => {
           return (

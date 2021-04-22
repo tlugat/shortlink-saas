@@ -12,6 +12,7 @@
   text-align: center;
   position: relative;
   background: linear-gradient(284.78deg, #85AFB2 22.21%, #ABE0E3 76.81%);
+  z-index: -2;
   @include small {
     border-radius: 10px;
   }
@@ -45,8 +46,10 @@
     padding: 1rem 0;
   }
   &__img {
+    z-index: -1;
     @include large {
       width: 432px;
+      
     }
   }
   &__buttons {
