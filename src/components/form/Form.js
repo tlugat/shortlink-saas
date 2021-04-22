@@ -1,10 +1,8 @@
 import {Formik, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 import styles from './Form.module.scss';
+import {Link} from 'react-router-dom';
 
-// import img_small from '../../assets/img/signup/signup-img-small.png';
-// import img_large from '../../assets/img/signup/signup-img-large.png';
-// import BlockImg from '../../components/block_img/BlockImg';
 
 const CustomInput = ({field, form, ...props}) => {
   return (
@@ -78,7 +76,7 @@ const Form = ({location}) => {
         )}
       </Formik> )}
 
-     { location.pathname === "/login" && (
+     { location === "/login" && (
        <Formik 
       onSubmit={submitLogIn} 
       initialValues={{email: "", password: ""}}
@@ -99,6 +97,7 @@ const Form = ({location}) => {
             <Field name="password" type="password"  component={CustomInput} />
             <ErrorMessage name="password" component={CustomError} />
             <button type="submit" disabled={isSubmitting}>Login</button>
+            <p>Don't have an account ? <span><Link to="/signup">Sign up</Link></span></p>
             <div className={styles.form__tertiaryConnexion}>
               <button>Login with Google</button>
               <button>Login with Facebook</button>

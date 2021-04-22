@@ -11,9 +11,9 @@ import Footer from '../footer/Footer';
 import Nav from '../nav/Nav';
 import Home from '../../pages/home/Home';
 import Pricing from '../../pages/pricing/Pricing';
-import Login from '../../pages/login/Login';
-import Signup from '../../pages/signup/Signup';
 import Connexion from '../connexion/Connexion';
+import Dashboard from '../../pages/dashboard/Dashboard'
+
 function App() {
   const screenWidth = useScreenSize().width;
 
@@ -33,7 +33,7 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route exact path ="/pricing" component={Pricing}/>
               <Route exact path="/login" component={Connexion}/>
-              <Route exact path="/signup" component={Signup}/>
+              <Route exact path="/signup" component={Connexion}/>
             </main>
           <Footer/>
         </Router>

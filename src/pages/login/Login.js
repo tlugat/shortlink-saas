@@ -1,9 +1,9 @@
 import Connexion from '../../components/connexion/Connexion';
 
-const Login = () => {
+const Login = ({location}) => {
   return (
     <section>
-      <Connexion/>
+      <Connexion location={location}/>
     </section>
   )
 }
