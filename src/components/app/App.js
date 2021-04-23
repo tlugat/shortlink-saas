@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from '../../errors/ErrorFallBack';
 import useScreenSize from '../../hooks/useScreenSize';
@@ -15,28 +15,52 @@ import Connexion from '../connexion/Connexion';
 import Dashboard from '../../pages/dashboard/Dashboard'
 import Doc from '../../pages/doc/Doc'
 
+
+function setToken(userToken) {
+  sessionStorage.setItem('token', JSON.stringify(userToken));
+  window.location.reload();
+}
+
+function getToken() {
+  const tokenString = sessionStorage.getItem('token');
+  return tokenString;
+}
+
+function clearToken() {
+  sessionStorage.clear();
+  window.location.reload();
+}
+
 function App() {
   const screenWidth = useScreenSize().width;
 
   const [menuIsActive, setMenuIsActive] = useState(false);
 
+  const token = getToken();
+  
   const toggleMenu = () => {
     setMenuIsActive(!menuIsActive)
   }
-
+  
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <div style={menuIsActive ? {height: 100 + 'vh'} : {height: 'auto'}} className={styles.App}>
         <Router>
-          <Header menuIsActive={menuIsActive} toggleMenu={toggleMenu} screenWidth={screenWidth} />
+          <Header clearToken={clearToken} token={token} menuIsActive={menuIsActive} toggleMenu={toggleMenu} screenWidth={screenWidth} />
             {screenWidth < 580 && <Nav screenWidth={screenWidth} menuIsActive={menuIsActive} />}
             <main>
-              <Route exact path="/" component={Home} />
-              <Route exact path ="/pricing" component={Pricing}/>
-              <Route exact path="/doc" component={Doc}/>
-              <Route exact path="/dashboard" component={Dashboard}/>
-              <Route exact path="/login" component={Connexion}/>
-              <Route exact path="/signup" component={Connexion}/>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path ="/pricing" component={Pricing}/>
+                <Route exact path="/doc" component={Doc}/>
+                <Route exact path="/dashboard" component={Dashboard}/>
+                {!token && (
+                  <>
+                    <Route exact path="/login" component={() => <Connexion setToken={setToken} location={"/login"}/>}/>
+                    <Route exact path="/signup" component={() => <Connexion setToken={setToken} location={"/signup"}/>}/>
+                  </>
+                )}
+              </Switch>
             </main>
           <Footer/>
         </Router>

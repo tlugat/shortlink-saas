@@ -7,12 +7,12 @@ import login_img_large from '../../assets/img/connexion/login/login-img-large.pn
 
 import styles from './Connexion.module.scss';
 
-const Connexion = ({location}) => {
+const Connexion = ({location, setToken}) => {
   
   let imgSmall = login_img_small
   let imgLarge = login_img_large
 
-  if(location.pathname === "/signup") {
+  if(location === "/signup") {
     imgSmall = signup_img_small;
     imgLarge = signup_img_large;
   } 
@@ -21,13 +21,13 @@ const Connexion = ({location}) => {
     <div className={styles.connexion} >
       <div className={styles.container}>
         <div className={styles.connexion__title}>
-          <h2>{location.pathname === "/signup" ? "Sign Up." : "Login."}</h2>
-          <p>{location.pathname === "/signup" ? "Welcome new user !" : "We are happy to see your here !"}</p>
+          <h2>{location === "/signup" ? "Sign Up." : "Login."}</h2>
+          <p>{location === "/signup" ? "Welcome new user !" : "We are happy to see your here !"}</p>
         </div>
-        <Form location={location.pathname} />
+        <Form location={location} setToken={setToken} />
       </div>
       
-      <BlockImg location={location.pathname} imgSmall={imgSmall} imgLarge={imgLarge}/>
+      <BlockImg location={location} imgSmall={imgSmall} imgLarge={imgLarge}/>
     </div>
     
   )

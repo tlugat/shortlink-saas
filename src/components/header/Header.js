@@ -5,7 +5,8 @@ import Nav from "../nav/Nav";
 import NavLogo from '../nav/NavLogo/NavLogo';
 import {Link} from 'react-router-dom';
 import CTA from '../ui_components/buttons/CTA';
-const Header = ({menuIsActive, toggleMenu, screenWidth}) => {
+
+const Header = ({menuIsActive, toggleMenu, screenWidth, token, clearToken}) => {
 
   return (
     <header className={styles.header}>
@@ -15,8 +16,13 @@ const Header = ({menuIsActive, toggleMenu, screenWidth}) => {
         {screenWidth < 580 && <NavLogo menuIsActive={menuIsActive} toggleMenu={toggleMenu}/>}
         
         <div className={styles.connexion}>
-          {screenWidth >= 768 && <Link className={styles.login} to="/login"><CTA value="Login" customStyles={{border: "none", color: "#4D9CA1", background: "#fff"}} /></Link>}
-          {screenWidth >= 580 && <Link to="/signup"><CTA value="Sign Up" customStyles={{border: screenWidth >= 780 && "solid 1px #4D9CA1", color: "#4D9CA1", background: "#fff"}} /></Link>}
+          {!token && (
+            <>
+              {screenWidth >= 768 && <Link className={styles.login} to="/login"><CTA value="Login" customStyles={{border: "none", color: "#4D9CA1", background: "#fff"}} /></Link>}
+              {screenWidth >= 580 && <Link to="/signup"><CTA value="Sign Up" customStyles={{border: screenWidth >= 780 && "solid 1px #4D9CA1", color: "#4D9CA1", background: "#fff"}} /></Link>}
+            </>
+          )}
+          {token && <CTA onClickMethod={clearToken} customStyles={{border: 'solid 1px red', color: 'red', background: 'none' }} value="Logout" />}
         </div>
         
       </div>
