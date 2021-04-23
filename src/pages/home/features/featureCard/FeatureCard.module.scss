@@ -1,3 +1,5 @@
+@import '../../../../scss/global';
+
 .card {
   background: rgba(233, 233, 233, 0.28);
   width: 300px;
@@ -8,6 +10,16 @@
   align-items: center;
   justify-content: space-around;
   padding: 1rem;
+  transition: .2s;
+  @include medium {
+    width: 240px;
+  }
+  @include large {
+    width: 300px;
+  }
+  &:hover {
+    transform: scale(1.2);
+  }
   &__link {
     display: flex;
     align-items: center;

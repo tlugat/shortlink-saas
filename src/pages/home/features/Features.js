@@ -1,34 +1,29 @@
 import useScreenSize from '../../../hooks/useScreenSize';
 import Carousel from 'react-elastic-carousel';
 import FeatureCard from './featureCard/FeatureCard';
-import shield from '../../../assets/logos/featureCard/shield.svg';
-import book from '../../../assets/logos/featureCard/book.svg';
-import gear from '../../../assets/logos/featureCard/gear.svg';
+import analyctics_img from '../../../assets/img/featureCard/analytics_1.png';
+import link_img from '../../../assets/img/featureCard/link_1_1.png';
+import qrcode_img from '../../../assets/img/featureCard/QRcode.png';
 import styles from './Features.module.scss';
 
 const Features = () => {
 const screenSize = useScreenSize().width;
 const features = [
   {
-    logo: shield,
+    logo: analyctics_img,
     title: 'Feature 1',
-    summary: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi vero porro modi exercitationem, officia nam molestias quaerat aperiam at quidem earum adipisci deserunt, enim ipsam ipsum cupiditate quae, alias iure!'
+    summary: 'Reduce the size of your links by using our shortlink API'
   },
   {
-    logo: gear,
+    logo: link_img,
     title: 'Feature 2',
-    summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ex quis beatae veritatis autem quasi laborum consequatur quae laboriosam nemo doloremque, repellat molestias mollitia. Nesciunt nostrum ipsam dolorem similique distinctio?'
+    summary: 'With the prenium subsription, enjoy a QR code for each transformed link'
   },
   {
-    logo: book,
+    logo: qrcode_img,
     title: 'Feature 3',
-    summary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, iste deserunt temporibus eos officiis veritatis dicta repellendus, veniam quos voluptatem mollitia. Blanditiis iste rerum suscipit ipsa maxime temporibus at hic!'
+    summary: 'With the premium subscription, take advantage of a complete dashboard to analyze your results in real time'
   },
-  {
-    logo: shield,
-    title: 'Feature 4',
-    summary: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, ipsum. Odit obcaecati ea beatae hic voluptatem dolorum iste exercitationem! Dolor ad ab adipisci atque, placeat nam excepturi non. Nisi, similique.'
-  }
 ]
 
 
@@ -38,10 +33,10 @@ const features = [
         <h2>Our features</h2>
         <p>Special features created just for you. To unlock advantages, please purchase our premium plan.</p>
       </div>
-      {screenSize < 1024 &&
+      {screenSize < 780 &&
         <Carousel>{features.map((feature, i) => <FeatureCard key={i} data={feature} />)}</Carousel>
       }
-      {screenSize >= 1024 && <div className={styles.features__cards}> {features.map((feature,i)=><FeatureCard key={i} data={feature} />)}</div>}
+      {screenSize >= 780 && <div className={styles.features__cards}> {features.map((feature,i)=><FeatureCard key={i} data={feature} />)}</div>}
     </article>
   )
 }

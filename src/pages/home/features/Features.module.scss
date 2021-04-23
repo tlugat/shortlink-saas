@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
+  
   &__title {
     padding: 0 2rem;
     @include medium {
@@ -22,6 +23,9 @@
     @include medium {
       display: flex;
       justify-content: space-between;
+    }
+    @include large {
+      width: 70%;
     }
   }
 }
