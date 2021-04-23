@@ -105,6 +105,11 @@
 
 }
 
+.logout {
+  background: none;
+  color: red;
+}
+
 .active {
   transform: translateX(0);
   transition: .2s;

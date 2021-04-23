@@ -23,7 +23,7 @@ const Nav = ({menuIsActive, screenWidth, token, userName, clearToken}) => {
         {screenWidth < 580 && (
             <>
             {token &&<li><span>Hi {userName} !</span></li> }
-            {token && <li><CTA className={styles.connexion__logout} onClickMethod={clearToken} customStyles={{border: 'none', color: 'red', background: 'none' }} value="Logout" /></li>}
+            {token && <li><CTA className={styles.connexion__logout} onClickMethod={clearToken} customStyles={{border: 'none', color: 'red', background: 'none'}} value="Logout" /></li>}
             </>
           )}
       </ul>

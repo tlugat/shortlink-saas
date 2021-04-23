@@ -20,7 +20,7 @@ const GetShortlink = ({userToken}) => {
     setNewUrl(shortlink)
   }
 
-  // useEffect(() =>  )
+  
 
   const getShortlink = async () => {
     const axios = require('axios')
@@ -47,6 +47,7 @@ const GetShortlink = ({userToken}) => {
           <p>Your brand new URL simplified :</p>
           <br/>
           <div className={styles.result}>
+          {newUrl}
             <span onClick={() => navigator.clipboard.writeText(newUrl)} ><img src={copy_link} alt="copy logo" /></span>
           </div>
         </div>

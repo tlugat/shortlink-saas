@@ -70,11 +70,13 @@
       border-radius: 5px;
       padding: 1.5rem 0;
       width: 100%;
-      
+      font-family: 'SF UI Display Medium';
       position: relative;
       margin-bottom: 2rem;
+      
       @include medium {
         margin-bottom: 0;
+  
       }
       span {
         content: '../../assets/logos/content_copy.svg';
@@ -84,6 +86,7 @@
         transform: translateY(-50%);
         cursor: pointer;
         padding: 0.2rem;
+        
         &:hover {
           background: #4b4b4b50;
           border-radius: 5px;
