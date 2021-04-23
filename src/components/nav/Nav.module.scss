@@ -63,6 +63,9 @@
           font-size: 14px;
         }
       }
+      &>span, button {
+        margin-right: auto;
+      }
     }
     .itemActive {
       color: #fff;
