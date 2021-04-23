@@ -38,10 +38,10 @@ const features = [
         <h2>Our features</h2>
         <p>Special features created just for you. To unlock advantages, please purchase our premium plan.</p>
       </div>
-      {screenSize < 780 &&
+      {screenSize < 1024 &&
         <Carousel>{features.map((feature, i) => <FeatureCard key={i} data={feature} />)}</Carousel>
       }
-      {screenSize >= 780 && <div className={styles.features__cards}> {features.map((feature,i)=><FeatureCard key={i} data={feature} />)}</div>}
+      {screenSize >= 1024 && <div className={styles.features__cards}> {features.map((feature,i)=><FeatureCard key={i} data={feature} />)}</div>}
     </article>
   )
 }

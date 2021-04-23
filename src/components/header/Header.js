@@ -1,6 +1,5 @@
 import styles from './Header.module.scss';
 import logo from '../../assets/logos/Logo-shorty.svg';
-import Profile from '../profile/Profile';
 import Nav from "../nav/Nav";
 import NavLogo from '../nav/NavLogo/NavLogo';
 import {Link} from 'react-router-dom';
@@ -22,8 +21,13 @@ const Header = ({menuIsActive, toggleMenu, screenWidth, token, clearToken, userN
               {screenWidth >= 580 && <Link to="/signup"><CTA value="Sign Up" customStyles={{border: screenWidth >= 780 && "solid 1px #4D9CA1", color: "#4D9CA1", background: "#fff"}} /></Link>}
             </>
           )}
-          {token && <span>Hi {userName} !</span>}
-          {token && <CTA className={styles.connexion__logout} onClickMethod={clearToken} customStyles={{border: 'solid 1px red', color: 'red', background: 'none' }} value="Logout" />}
+          {screenWidth >= 580 && (
+            <>
+            {token && <span>Hi {userName} !</span>}
+            {token && <CTA className={styles.connexion__logout} onClickMethod={clearToken} customStyles={{border: 'none', color: 'red', background: 'none' }} value="Logout" />}
+            </>
+          )}
+          
         </div>
         
       </div>

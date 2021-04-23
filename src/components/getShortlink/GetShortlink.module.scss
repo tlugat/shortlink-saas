@@ -9,6 +9,16 @@
   @include small {
     padding: 2rem 2rem 0 2rem;
   }
+  @include medium {
+    flex-direction: row;
+    justify-content: center;
+  }
+  &>div:first-child {
+    @include medium {
+      padding-right: 2rem
+    }
+    
+  }
   &__field {
     height: 200px;
     display: flex;
@@ -19,7 +29,8 @@
     padding: 2rem 0;
     @include medium {
       flex-direction: row;
-      justify-content: center;
+      padding: 0;
+      justify-content: flex-start;
     }
     input[type="text"] {
       padding: 1rem 1rem;
@@ -29,7 +40,19 @@
       max-width: 500px;
       @include medium {
         margin-right: 2rem;
+        max-width: 800px;
       }
+    }
+  }
+  &__qrCode {
+    width: 100%;
+    padding: 2rem;
+    background: #F6F8FA;
+    border-radius: 10px;
+    max-width: 250px;
+    @include medium {
+      align-self: flex-end;
+      height: 100%;
     }
   }
   &__text {
@@ -37,16 +60,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+    @include medium {
+      align-items: flex-start;
+    }
     
 
     &>.result {
       background: #F6F8FA;
       border-radius: 5px;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
       width: 100%;
-      max-width: 800px;
+      
       position: relative;
+      margin-bottom: 2rem;
+      @include medium {
+        margin-bottom: 0;
+      }
       span {
         content: '../../assets/logos/content_copy.svg';
         position: absolute;
@@ -59,6 +88,9 @@
           background: #4b4b4b50;
           border-radius: 5px;
           
+        }
+        img {
+          width: 1.3rem;
         }
       }
     }
