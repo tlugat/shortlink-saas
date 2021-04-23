@@ -5,7 +5,7 @@ import copy_link from '../../assets/logos/content_copy.svg';
 import QRCode from 'qrcode.react';
 
 
-const GetShortlink = () => {
+const GetShortlink = ({userToken}) => {
 
   const [url, setUrl] = useState('');
   const [newUrl, setNewUrl] = useState('yourUrl.com');
@@ -22,9 +22,10 @@ const GetShortlink = () => {
 
   const getShortlink = () => {
     const axios = require('axios')
-
+    
     axios.post('http://shorty-api-shortlink.herokuapp.com/api/url/shorten', {
         longUrl: url,
+        token: userToken
     })
     .then((response) => handleShortlink(response))
     .catch((error) => console.log(error));

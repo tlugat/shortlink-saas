@@ -22,8 +22,12 @@ function setToken(userToken) {
 }
 
 function getToken() {
-  const tokenString = sessionStorage.getItem('token');
-  return tokenString;
+  const token = sessionStorage.getItem('token');
+  return token;
+}
+function getUserName() {
+  const userName = sessionStorage.getItem('userName');
+  return userName;
 }
 
 function clearToken() {
@@ -37,6 +41,7 @@ function App() {
   const [menuIsActive, setMenuIsActive] = useState(false);
 
   const token = getToken();
+  const userName = getUserName();
   
   const toggleMenu = () => {
     setMenuIsActive(!menuIsActive)
@@ -46,11 +51,11 @@ function App() {
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <div style={menuIsActive ? {height: 100 + 'vh'} : {height: 'auto'}} className={styles.App}>
         <Router>
-          <Header clearToken={clearToken} token={token} menuIsActive={menuIsActive} toggleMenu={toggleMenu} screenWidth={screenWidth} />
+          <Header userName={userName} clearToken={clearToken} token={token} menuIsActive={menuIsActive} toggleMenu={toggleMenu} screenWidth={screenWidth} />
             {screenWidth < 580 && <Nav screenWidth={screenWidth} menuIsActive={menuIsActive} />}
             <main>
               <Switch>
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" component={() => <Home userToken={token} />} />
                 <Route exact path ="/pricing" component={Pricing}/>
                 <Route exact path="/doc" component={Doc}/>
                 <Route exact path="/dashboard" component={Dashboard}/>

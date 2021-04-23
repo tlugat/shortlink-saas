@@ -6,7 +6,7 @@ import NavLogo from '../nav/NavLogo/NavLogo';
 import {Link} from 'react-router-dom';
 import CTA from '../ui_components/buttons/CTA';
 
-const Header = ({menuIsActive, toggleMenu, screenWidth, token, clearToken}) => {
+const Header = ({menuIsActive, toggleMenu, screenWidth, token, clearToken, userName}) => {
 
   return (
     <header className={styles.header}>
@@ -22,7 +22,8 @@ const Header = ({menuIsActive, toggleMenu, screenWidth, token, clearToken}) => {
               {screenWidth >= 580 && <Link to="/signup"><CTA value="Sign Up" customStyles={{border: screenWidth >= 780 && "solid 1px #4D9CA1", color: "#4D9CA1", background: "#fff"}} /></Link>}
             </>
           )}
-          {token && <CTA onClickMethod={clearToken} customStyles={{border: 'solid 1px red', color: 'red', background: 'none' }} value="Logout" />}
+          {token && <span>Hi {userName} !</span>}
+          {token && <CTA className={styles.connexion__logout} onClickMethod={clearToken} customStyles={{border: 'solid 1px red', color: 'red', background: 'none' }} value="Logout" />}
         </div>
         
       </div>
