@@ -18,13 +18,10 @@
   }
 
   &__cards {
+    width: 100%;
     @include medium {
-      width: 90%;
       display: flex;
       justify-content: space-between;
-    }
-    @include large {
-      width: 75%;
     }
   }
 }

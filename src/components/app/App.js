@@ -52,7 +52,7 @@ function App() {
       <div style={menuIsActive ? {height: 100 + 'vh'} : {height: 'auto'}} className={styles.App}>
         <Router>
           <Header userName={userName} clearToken={clearToken} token={token} menuIsActive={menuIsActive} toggleMenu={toggleMenu} screenWidth={screenWidth} />
-            {screenWidth < 580 && <Nav screenWidth={screenWidth} menuIsActive={menuIsActive} />}
+            {screenWidth < 580 && <Nav clearToken={clearToken} token={token} userName={userName} screenWidth={screenWidth} menuIsActive={menuIsActive} />}
             <main>
               <Switch>
                 <Route exact path="/" component={() => <Home userToken={token} />} />
