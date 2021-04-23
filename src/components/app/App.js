@@ -17,7 +17,7 @@ import Doc from '../../pages/doc/Doc'
 
 
 function setToken(userToken) {
-  sessionStorage.setItem('token', JSON.stringify(userToken));
+  sessionStorage.setItem('token', userToken);
   window.location.reload();
 }
 

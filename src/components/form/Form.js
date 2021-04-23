@@ -56,7 +56,7 @@ const Form = ({location, setToken}) => {
     const {name, email, password, password2} = values;
     actions.setSubmitting(false);
     const token = await registerUser({name, email, password, password2});
-    sessionStorage.setItem('userName', JSON.stringify(name));
+    sessionStorage.setItem('userName', name);
     setToken(token.data.token);
   } 
 
@@ -64,7 +64,7 @@ const Form = ({location, setToken}) => {
     const {email, password} = values;
     actions.setSubmitting(false);
     const token = await loginUser({email, password});
-    sessionStorage.setItem('userName', JSON.stringify(token.data.name));
+    sessionStorage.setItem('userName', token.data.name);
     setToken(token.data.token);
   }
 
