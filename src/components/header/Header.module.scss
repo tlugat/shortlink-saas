@@ -36,5 +36,15 @@
 .connexion {
   display: flex;
   justify-content: flex-end;
-}
+  align-items: center;
+
+  span {
+    padding-right: 1rem;
+    @include medium {
+      padding-right: 2rem;
+    }
+  }
+  
+  }
+  
 }
